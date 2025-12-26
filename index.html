@@ -8,40 +8,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --primary: #0a66c2;
-    --secondary: #004182;
-    --light-bg: #f5f7fb;
-    --dark: #1f2937;
-}
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--light-bg);
+    background: #f5f7fb;
     color: #333;
 }
 
-/* HEADER */
 header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, #0a66c2, #004182);
     color: white;
-    padding: 80px 20px;
+    padding: 70px 20px;
     text-align: center;
-}
-
-header img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    margin-bottom: 15px;
 }
 
 header h1 {
     font-size: 42px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -49,109 +32,53 @@ header p {
     opacity: 0.95;
 }
 
-/* GENERAL */
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .section-title {
     font-size: 28px;
-    margin-bottom: 25px;
-    color: var(--primary);
-    text-align: center;
+    margin-bottom: 20px;
+    color: #0a66c2;
 }
 
-/* CARDS */
 .card {
     background: white;
     padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-/* ABOUT */
-.about {
-    text-align: center;
-    max-width: 850px;
-    margin: auto;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* SKILLS */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
-
-.skill {
-    background: #e8f0fe;
-    color: var(--primary);
-    padding: 10px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* PROJECTS */
-.projects {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
-.project img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 12px;
-}
-
-.project h3 {
-    margin: 10px 0 6px;
-    color: var(--dark);
-}
-
-.project p {
-    font-size: 15px;
-}
-
-/* CONTACT */
-.contact {
-    text-align: center;
-}
-
-.contact a {
+.skills span {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 22px;
-    border-radius: 30px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-.contact a:hover {
-    background: var(--secondary);
-}
-
-/* FOOTER */
-footer {
-    background: #e5e7eb;
-    text-align: center;
-    padding: 15px;
+    background: #e8f0fe;
+    color: #0a66c2;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 20px;
     font-size: 14px;
+}
+
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+a {
+    color: #0a66c2;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -159,94 +86,93 @@ footer {
 <body>
 
 <header>
-    <!-- Replace profile.jpg with your photo -->
-    <img src=""C:\Users\USER\Downloads\sha.png"" alt="Sharika Mushtaq">
     <h1>Sharika Mushtaq</h1>
-    <p>AI/ML Engineer • Technical Proposal Writer • Data Science Enthusiast</p>
+    <p>AI / ML Engineer • Technical Proposal Writer</p>
+    <p>Srinagar, J&K</p>
 </header>
 
 <div class="container">
 
-    <!-- ABOUT -->
     <section>
         <h2 class="section-title">About Me</h2>
-        <div class="card about">
-            I am a Computer Science graduate with strong expertise in Machine Learning, 
-            AI research, and technical proposal writing. I have hands-on experience 
-            building predictive models, speech emotion recognition systems, and 
-            supporting U.S.-based sales and proposal teams.
+        <div class="card">
+            AI/ML Engineer and Technical Proposal Writer with hands-on experience in deep learning,
+            time-series forecasting, and real-world AI applications. Proven ability to develop
+            RNN, LSTM, and CNN models while supporting U.S.-based proposals, CRM management,
+            and sales operations.
         </div>
     </section>
 
-    <!-- SKILLS -->
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Temperature Forecasting (RNN & LSTM)</h3>
+                <p>
+                    Built predictive models using 33 years of weather data to forecast
+                    maximum and minimum temperatures. Evaluated performance using MAE,
+                    MSE, and RMSE metrics.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Speech Emotion Recognition (CNN)</h3>
+                <p>
+                    Developed a CNN-based emotion recognition system trained on the TESS dataset,
+                    achieving 91% accuracy and outperforming traditional ML classifiers.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section>
         <h2 class="section-title">Skills</h2>
         <div class="card skills">
-            <span class="skill">Python</span>
-            <span class="skill">Machine Learning</span>
-            <span class="skill">Deep Learning</span>
-            <span class="skill">TensorFlow</span>
-            <span class="skill">PyTorch</span>
-            <span class="skill">Pandas</span>
-            <span class="skill">NumPy</span>
-            <span class="skill">Scikit-learn</span>
-            <span class="skill">Data Analysis</span>
-            <span class="skill">Technical Writing</span>
-            <span class="skill">Proposal Development</span>
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>PyTorch</span>
+            <span>Scikit-learn</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Deep Learning</span>
+            <span>Machine Learning</span>
+            <span>Proposal Writing</span>
+            <span>CRM Management</span>
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section>
-        <h2 class="section-title">Projects</h2>
-        <div class="projects">
+        <h2 class="section-title">Experience</h2>
+        <div class="card">
+            <h3>Technical Proposal Writer / Developer – iQuasar LLC</h3>
+            <p>
+                Developed compliant and compelling proposals for U.S. clients while supporting
+                lead generation, prospect research, CRM updates, and sales operations.
+            </p>
+        </div>
 
-            <div class="card project">
-                <!-- Replace with your project image -->
-                <img src="project1.jpg" alt="Temperature Forecasting">
-                <h3>Temperature Forecasting (RNN & LSTM)</h3>
-                <p>
-                    Developed a time-series forecasting model using RNN and LSTM 
-                    architectures on 33 years of weather data to predict minimum 
-                    and maximum temperatures.
-                </p>
-            </div>
-
-            <div class="card project">
-                <img src="project2.jpg" alt="Speech Emotion Recognition">
-                <h3>Speech Emotion Recognition</h3>
-                <p>
-                    Built a CNN-based Speech Emotion Recognition system using the 
-                    TESS dataset, achieving 91% test accuracy.
-                </p>
-            </div>
-
-            <div class="card project">
-                <img src="project3.jpg" alt="Proposal Writing">
-                <h3>Technical Proposal Development</h3>
-                <p>
-                    Supported U.S.-based clients with compliant, win-focused 
-                    technical proposals, lead research, and CRM support.
-                </p>
-            </div>
-
+        <div class="card">
+            <h3>AI/ML Research Intern – NIELIT</h3>
+            <p>
+                Designed and trained RNN and LSTM models for long-term temperature forecasting,
+                contributing to agricultural planning and climate analysis.
+            </p>
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section>
         <h2 class="section-title">Contact</h2>
-        <div class="card contact">
-            <a href="mailto:sharikamushtaq@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/sharika-mushtaq-47555b262" target="_blank">LinkedIn</a>
-            <a href="https://github.com/" target="_blank">GitHub</a>
+        <div class="card">
+            📧 <a href="mailto:sharikamushtaq@gmail.com">sharikamushtaq@gmail.com</a><br><br>
+            🔗 <a href="https://www.linkedin.com/in/sharika-mushtaq-47555b262/" target="_blank">LinkedIn Profile</a><br><br>
+            💻 <a href="https://github.com/sharikamushtaq" target="_blank">GitHub</a>
         </div>
     </section>
 
 </div>
 
 <footer>
-    © 2025 Sharika Mushtaq | Portfolio
+    © 2025 Sharika Mushtaq • Built with GitHub Pages
 </footer>
 
 </body>
